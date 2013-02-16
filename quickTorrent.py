@@ -7,7 +7,7 @@ import sys
 import time
 import libtorrent
 
-DESTINATION = r'C:\cygwin\home\lhackenberg\code\python\mytorrent'
+DESTINATION = r'C:\cygwin\home\lhackenberg\code\python\quickTorrent'
 
 STATE_STR = ['queued', 'checking', 'downloading metadata', 'downloading',
              'finished', 'seeding', 'allocating', 'checking fastresume']
