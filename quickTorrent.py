@@ -65,11 +65,10 @@ def main():
     try:
         while args.seed or not h.is_seed():
             s = h.status()
-            sys.stdout.write('%.2f%% complete (down: %.1f kb/s up: %.1f kb/s '
-                             'peers: %d) %s\r'
-                             % (s.progress * 100, s.download_rate / 1000,
-                                s.upload_rate / 1000, s.num_peers,
-                                STATE_STR[s.state]))
+            sys.stdout.write(
+                '%.2f%% complete (down: %.1f kb/s up: %.1f kb/s peers: %d) %s\r'
+                % (s.progress * 100, s.download_rate / 1000,
+                   s.upload_rate / 1000, s.num_peers, STATE_STR[s.state]))
 
             sys.stdout.flush()
             time.sleep(1)
@@ -81,7 +80,6 @@ def main():
                 time.sleep(1)
 
         sys.stdout.write('%s' % h.name() + ' complete\n')
-        sys.exit(0)
     except KeyboardInterrupt:
         sys.exit(0)
 
